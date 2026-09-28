@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --bg-main: #06162F;
+  --bg-sidebar: #071A35;
+  --bg-card: #0A2041;
+  --border-card: #164A7D;
+  --primary-blue: #1687F8;
+  --accent-cyan: #27C7E8;
+  --text-primary: #F4F8FF;
+  --text-secondary: #A9BEDA;
+  --status-success: #20C997;
+  --status-warning: #FACC15;
+  --status-high: #F97316;
+  --status-extreme: #EF4444;
+}
+
+@theme {
+  --color-main-bg: #06162F;
+  --color-sidebar-bg: #071A35;
+  --color-card-bg: #0A2041;
+  --color-card-border: #164A7D;
+  --color-primary-blue: #1687F8;
+  --color-accent-cyan: #27C7E8;
+  --color-text-primary: #F4F8FF;
+  --color-text-secondary: #A9BEDA;
+  --color-risk-low: #20C997;
+  --color-risk-moderate: #FACC15;
+  --color-risk-high: #F97316;
+  --color-risk-very_high: #EF4444;
+}
+
+body {
+  background-color: #06162F;
+  color: #F4F8FF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom sleek scrollbar for control room tables/panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071A35;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #164A7D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1687F8;
+}
+
+.leaflet-container {
+  background-color: #06162F !important;
+  font-family: inherit;
+  border-radius: 0.75rem;
+}

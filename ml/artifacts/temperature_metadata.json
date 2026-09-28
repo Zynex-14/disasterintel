@@ -1,0 +1,105 @@
+{
+  "variable": "temperature",
+  "version": "v1.2.0",
+  "trained_at": "2026-09-28T13:53:20.781462+00:00",
+  "train_samples": 13440,
+  "test_samples": 2880,
+  "feature_columns": [
+    "lead_hours",
+    "latitude",
+    "longitude",
+    "elevation_m",
+    "is_coastal",
+    "month_sin",
+    "month_cos",
+    "hour_sin",
+    "hour_cos",
+    "gfs_val",
+    "ecmwf_val",
+    "icon_val",
+    "imd_val",
+    "ensemble_mean",
+    "ensemble_std",
+    "spread_max_min",
+    "diff_ecmwf_gfs",
+    "diff_icon_imd"
+  ],
+  "feature_importance": {
+    "ensemble_mean": 0.9961,
+    "gfs_val": 0.0022,
+    "ecmwf_val": 0.0006,
+    "imd_val": 0.0002,
+    "elevation_m": 0.0001,
+    "month_cos": 0.0001,
+    "hour_cos": 0.0001,
+    "icon_val": 0.0001,
+    "ensemble_std": 0.0001,
+    "spread_max_min": 0.0001,
+    "diff_ecmwf_gfs": 0.0001,
+    "diff_icon_imd": 0.0001,
+    "lead_hours": 0.0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "is_coastal": 0.0,
+    "month_sin": 0.0,
+    "hour_sin": 0.0
+  },
+  "metrics": {
+    "GFS": {
+      "mae": 1.251,
+      "rmse": 1.45,
+      "bias": 1.179,
+      "sample_count": 2880,
+      "correlation": 0.987,
+      "skill_score": -2.341
+    },
+    "ECMWF": {
+      "mae": 0.581,
+      "rmse": 0.719,
+      "bias": -0.405,
+      "sample_count": 2880,
+      "correlation": 0.993,
+      "skill_score": -0.656
+    },
+    "ICON": {
+      "mae": 0.687,
+      "rmse": 0.854,
+      "bias": 0.479,
+      "sample_count": 2880,
+      "correlation": 0.991,
+      "skill_score": -0.968
+    },
+    "IMD_NWP": {
+      "mae": 0.496,
+      "rmse": 0.626,
+      "bias": -0.201,
+      "sample_count": 2880,
+      "correlation": 0.993,
+      "skill_score": -0.442
+    },
+    "Equal_Weight": {
+      "mae": 0.349,
+      "rmse": 0.434,
+      "bias": 0.263,
+      "sample_count": 2880,
+      "correlation": 0.998,
+      "skill_score": 0.0
+    },
+    "Linear_Regression": {
+      "mae": 0.471,
+      "rmse": 0.575,
+      "bias": -0.36,
+      "sample_count": 2880,
+      "correlation": 0.996,
+      "skill_score": -0.326
+    },
+    "Random_Forest": {
+      "mae": 0.272,
+      "rmse": 0.346,
+      "bias": 0.017,
+      "sample_count": 2880,
+      "correlation": 0.998,
+      "skill_score": 0.204
+    }
+  }
+}
