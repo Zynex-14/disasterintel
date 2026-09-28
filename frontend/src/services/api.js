@@ -1,4 +1,15 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || '/api/v1';
+let rawBaseUrl = (
+  import.meta.env.VITE_API_BASE_URL ||
+  import.meta.env.VITE_API_BASE_URL_ ||
+  import.meta.env.VITE_API_URL ||
+  '/api/v1'
+).trim();
+
+if (rawBaseUrl.startsWith('http') && !rawBaseUrl.includes('/api')) {
+  rawBaseUrl = `${rawBaseUrl.replace(/\/+$/, '')}/api/v1`;
+}
+
+const API_BASE_URL = rawBaseUrl.replace(/\/+$/, '');
 
 async function fetchJson(endpoint, options = {}) {
   const url = `${API_BASE_URL}${endpoint}`;
